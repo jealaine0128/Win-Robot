@@ -1,0 +1,818 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
+
+:root {
+  --purple: #814096;
+  --blue: #3298f8;
+  --black: #070707;
+  --gradient: linear-gradient(90deg, var(--purple), var(--blue));
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+}
+
+*::selection {
+  background: var(--blue);
+  color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #f9f9f9;
+}
+
+section {
+  min-height: 100vh;
+  padding: 0 9%;
+  padding-top: 7.5rem;
+  padding-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 3rem;
+  border-radius: 5rem;
+  background: var(--gradient);
+  font-size: 1.7rem;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s linear;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.heading {
+  text-align: center;
+  background: var(--gradient);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 3rem 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  padding-bottom: 0.1px;
+}
+#header-img {
+  max-width: 250px;
+  width: 100%;
+  height: 100%;
+}
+
+header .nav-link a {
+  font-size: 1.7rem;
+  margin-left: 2rem;
+  color: var(--purple);
+}
+
+header .nav-link a:hover {
+  color: var(--blue);
+}
+
+header input {
+  display: none;
+}
+
+header label {
+  font-size: 3rem;
+  color: var(--purple);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+}
+
+header button {
+  background-color: #555;
+  color: green;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  background-color: transparent;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+header button .badge {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  padding: 1px 3px;
+  border-radius: 100%;
+  font-size: x-small;
+  background: red;
+  color: white;
+}
+
+h1:before {
+  content: attr(data-count);
+  color: white;
+  position: abosolute;
+  right: 16px;
+  font-size: 15px;
+  text-align: center;
+  top: -12px;
+  width: 20px;
+  height: 20px;
+  background: 50%;
+  border-radius: 50%;
+  opacity: 0;
+}
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(/images/home\ background.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .image img {
+  max-width: 100%;
+  max-height: 100%;
+  animation: float 3s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(-3.5rem);
+  }
+}
+
+.home .content h2 {
+  font-size: 5.5rem;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.home .content h2 span {
+  color: var(--purple);
+  text-transform: uppercase;
+}
+
+.home .content p {
+  font-size: 2rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+.features .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.features .box-container .box {
+  flex: 1 1 30rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  margin: 1.5rem;
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: 0.2s linear;
+}
+
+.features .box-container .box img {
+  height: 15rem;
+}
+
+.features .box-container .box h3 {
+  font-size: 2rem;
+  color: #333;
+  padding-top: 1rem;
+}
+
+.features .box-container .box p {
+  font-size: 1.3rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+.about {
+  background: url(/images/about.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 3rem;
+}
+
+.about .column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about .column .image {
+  flex: 1 1 40rem;
+}
+
+.about .column .image img {
+  width: 100%;
+  animation: float 3s linear infinite;
+}
+
+.about .column .content {
+  flex: 1 1 40rem;
+}
+
+.about .column .content h3 {
+  font-size: 7rem;
+  color: #3805f3;
+}
+
+.about .column .content p {
+  font-size: 2.5rem;
+  color: #be5f5f;
+  padding: 1rem 0;
+}
+
+.about .column .content .buttons a:last-child {
+  margin-left: 2rem;
+}
+
+.newsletter {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: url(/images/subscribe.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.newsletter h3 {
+  color: #fff;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.newsletter p {
+  color: #fff;
+  font-size: 1.6rem;
+  margin: 2rem auto;
+  width: 70rem;
+}
+
+.newsletter form {
+  display: flex;
+  max-width: 70rem;
+  border: 0.2rem solid #fff;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  margin: 2rem auto;
+  height: 5.5rem;
+}
+
+.newsletter form input[type="email"] {
+  padding: 0 2rem;
+  font-size: 1.7rem;
+  background: none;
+  width: 100%;
+  color: #fff;
+  text-transform: none;
+  background: none;
+}
+
+.newsletter form input[type="email"]::placeholder {
+  color: #eee;
+  text-transform: capitalize;
+}
+
+.newsletter form input[type="submit"] {
+  background: #fff;
+  width: 20rem;
+  font-size: 1.7rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.newsletter form input[type="submit"]:hover {
+  color: var(--blue);
+}
+
+.pricing .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pricing .box-container .box {
+  flex: 1 1 27rem;
+  margin: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.pricing .box-container .box:hover {
+  border: 0.2rem solid var(--blue);
+}
+
+.pricing .box-container .box .title {
+  color: var(--purple);
+  font-size: 2.5rem;
+  padding-top: 1rem;
+}
+
+.pricing .box-container .box .price {
+  font-size: 4rem;
+  color: var(--blue);
+  padding: 1rem 0;
+}
+
+.pricing .box-container .box .price span {
+  font-size: 2rem;
+}
+
+.pricing .box-container .box ul {
+  padding: 1rem 0;
+  list-style: none;
+}
+
+.pricing .box-container .box ul li {
+  font-size: 1.7rem;
+  color: #666;
+  padding: 0.5rem 0;
+}
+
+.pricing .box-container .box ul li .fa-check {
+  color: lightgreen;
+}
+
+.pricing .box-container .box ul li .fa-times {
+  color: tomato;
+}
+
+.vidwrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 3em auto;
+  border: 5px solid rgb(84, 50, 205);
+}
+
+.vidcontainer {
+  width: 100%;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  border: 5px solid rgb(255, 0, 0);
+  position: relative;
+}
+
+.vidcontainer iframe,
+.vidcontainer video {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 4rem;
+}
+
+.contact .image {
+  flex: 1 1 40rem;
+}
+
+.contact .image img {
+  width: 100%;
+  padding: 2rem;
+}
+
+.contact form {
+  flex: 1 1 30rem;
+  padding: 2rem 5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+.contact form .heading {
+  text-align: center;
+  padding: 0;
+  padding-bottom: 2rem;
+}
+
+.contact form .inputBox {
+  position: relative;
+}
+
+.contact form .inputBox input,
+.contact form .inputBox textarea {
+  width: 100%;
+  background: none;
+  color: #666;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  font-size: 1.7rem;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+  text-transform: none;
+}
+
+.contact form .inputBox textarea {
+  resize: none;
+  height: 13rem;
+}
+
+.contact form .inputBox label {
+  position: absolute;
+  top: 1.7rem;
+  left: 0;
+  font-size: 1.7rem;
+  color: #666;
+  transition: 0.2s linear;
+}
+
+.contact form .inputBox input:focus ~ label,
+.contact form .inputBox input:valid ~ label,
+.contact form .inputBox textarea:focus ~ label,
+.contact form .inputBox textarea:valid ~ label {
+  top: -0.5rem;
+  font-size: 1.5rem;
+  color: var(--blue);
+}
+
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+.footer ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.footer ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+.footer ul a:hover {
+  color: var(--black);
+}
+
+footer {
+  width: 100%;
+  background: url(/images/subscribe.png);
+  color: #fcf7f7;
+  display: grid;
+  place-items: center;
+  padding: 2em;
+  font-size: 2rem;
+}
+
+.container {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(12, 12, 12, 1.5)),
+    url(/form\ background.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-repeat: repeat;
+  background-size: 100px;
+}
+
+.login {
+  width: 800px;
+  min-height: 400px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #222;
+  display: flex;
+  box-shadow: 15px 5px 30px rgba(0, 0, 0, 3);
+}
+.contents {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(185, 220, 236);
+}
+
+.contents img {
+  width: 150%;
+  align-items: center;
+}
+
+.contents p {
+  font-size: 20px;
+  text-indent: 20;
+}
+.loginform {
+  flex-basis: 50%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 25px;
+}
+.loginform h1 {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 2.5rem;
+  color: #fff;
+}
+.tbox {
+  border-radius: 10px;
+  background: transparent;
+  outline: none;
+  border: 1px solid #55efc4;
+  width: 100%;
+  height: 35px;
+  margin: 30px 0;
+}
+.tbox input {
+  background: transparent;
+  width: 90%;
+  outline: none;
+  border: 0;
+  padding-left: 5px;
+  color: whitesmoke;
+  align-items: center;
+}
+::placeholder {
+  color: #777;
+}
+.tbox i {
+  font-size: 20px;
+}
+
+.button {
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  background: #e9f7f4;
+  color: #0b0c0c;
+  padding: 12px;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* media queries  */
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 0 3%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header label {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  header .nav-link {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #e9e1e1;
+    padding: 1rem 2rem;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 2;
+    transition: 0.2s linear;
+    text-align: center;
+  }
+
+  header .nav-link a {
+    display: block;
+    margin: 2rem 0;
+    font-size: 2rem;
+  }
+
+  header input:checked ~ .nav-link {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  header input:checked ~ label::before {
+    content: "\f00d";
+  }
+
+  .home {
+    flex-flow: column-reverse;
+  }
+
+  .home .image img {
+    width: 100%;
+  }
+
+  .home .content h3 {
+    font-size: 3.6rem;
+  }
+
+  .home .content p {
+    font-size: 1.5rem;
+  }
+
+  .about {
+    background-position: right;
+  }
+
+  .newsletter p {
+    width: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .about .column .content .buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about .column .content .buttons a:last-child {
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .login {
+    flex-direction: column;
+    margin: 0 15px;
+  }
+}
+
+/* type writter  */
+.content h2 {
+  overflow: hidden;
+  /*border-right: 0.15em solid orange;*/
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+/* modal */
+
+/* The Modal (background) */
+.modal {
+  font-size: large;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 300px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+
+.modal-header {
+  padding: 20px 16px;
+}
+.modal-header button {
+  background-color: transparent;
+  color: red;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-header button:hover,
+.modal-header button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px 16px;
+}
+
+.modal-footer {
+  padding: 20px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.red {
+  color: red;
+}
